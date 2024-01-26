@@ -2,6 +2,7 @@ package com.example.demo.entities;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -14,14 +15,14 @@ public class AtendimentoPacienteV {
     @Column(name = "nm_medico")
     private String nmMedico;
     @Column(name = "dt_entrada")
-    private LocalDateTime dtEntrada;
+    private LocalDate dtEntrada;
     @Column(name = "ds_convenio")
     private String dsConvenio;
 
     public AtendimentoPacienteV(){
 
     }
-    public AtendimentoPacienteV(Integer nrAtendimento, String nmMedico, LocalDateTime dtEntrada, String dsConvenio) {
+    public AtendimentoPacienteV(Integer nrAtendimento, String nmMedico, LocalDate dtEntrada, String dsConvenio) {
         this.nrAtendimento = nrAtendimento;
         this.nmMedico = nmMedico;
         this.dtEntrada = dtEntrada;
@@ -44,11 +45,11 @@ public class AtendimentoPacienteV {
         this.nmMedico = nmMedico;
     }
 
-    public LocalDateTime getDtEntrada() {
+    public LocalDate getDtEntrada() {
         return dtEntrada;
     }
 
-    public void setDtEntrada(LocalDateTime dtEntrada) {
+    public void setDtEntrada(LocalDate dtEntrada) {
         this.dtEntrada = dtEntrada;
     }
 
