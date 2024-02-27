@@ -14,6 +14,8 @@ public class AtendimentoPacienteV {
     private Integer nrAtendimento;
     @Column(name = "nm_medico")
     private String nmMedico;
+    @Column(name = "nm_paciente")
+    private String nmPaciente;
     @Column(name = "dt_entrada")
     private LocalDate dtEntrada;
     @Column(name = "ds_convenio")
@@ -22,9 +24,10 @@ public class AtendimentoPacienteV {
     public AtendimentoPacienteV(){
 
     }
-    public AtendimentoPacienteV(Integer nrAtendimento, String nmMedico, LocalDate dtEntrada, String dsConvenio) {
+    public AtendimentoPacienteV(Integer nrAtendimento, String nmMedico, String nmPaciente, LocalDate dtEntrada, String dsConvenio) {
         this.nrAtendimento = nrAtendimento;
         this.nmMedico = nmMedico;
+        this.nmPaciente = nmPaciente;
         this.dtEntrada = dtEntrada;
         this.dsConvenio = dsConvenio;
     }
@@ -43,6 +46,14 @@ public class AtendimentoPacienteV {
 
     public void setNmMedico(String nmMedico) {
         this.nmMedico = nmMedico;
+    }
+
+    public String getNmPaciente() {
+        return nmPaciente;
+    }
+
+    public void setNmPaciente(String nmPaciente) {
+        this.nmPaciente = nmPaciente;
     }
 
     public LocalDate getDtEntrada() {
